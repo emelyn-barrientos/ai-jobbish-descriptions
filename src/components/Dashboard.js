@@ -5,6 +5,7 @@ export default function Dashboard() {
   const [industry, setIndustry] = useState('')
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
+  const handleIndustry = (e) => setIndustry(e.target.value)
 
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -38,6 +39,7 @@ export default function Dashboard() {
               placeholder="Industry"
               id="industry"
               value={industry}
+              onChange={handleIndustry}
               required
             />
           </div>
