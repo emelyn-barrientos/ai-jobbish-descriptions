@@ -6,8 +6,8 @@ export default function Dashboard() {
   const handleJobTitle = (e) => setJobTitle(e.target.value)
 
   return (
-    <>
-      <div>
+    <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-12">
         <form>
           <div>
             <label className="sr-only" htmlFor="jobTitle">
@@ -25,6 +25,6 @@ export default function Dashboard() {
           </div>
         </form>
       </div>
-    </>
+    </div>
   )
 }
