@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
 export default function Dashboard() {
+  const [jobTitle, setJobTitle] = useState('')
+
+  const handleJobTitle = (e) => setJobTitle(e.target.value)
+
   return (
     <>
       <div>
@@ -14,6 +18,9 @@ export default function Dashboard() {
               name="jobTitle"
               placeholder="Job Title"
               id="jobTitle"
+              value={jobTitle}
+              onChange={handleJobTitle}
+              required
             />
           </div>
         </form>
