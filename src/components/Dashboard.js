@@ -9,6 +9,7 @@ export default function Dashboard() {
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-12">
         <form>
+          {/* Job Title */}
           <div className="flex flex-col">
             <label className="sr-only" htmlFor="jobTitle">
               Job Title
@@ -21,6 +22,19 @@ export default function Dashboard() {
               id="jobTitle"
               value={jobTitle}
               onChange={handleJobTitle}
+              required
+            />
+          </div>
+          {/* Industry */}
+          <div>
+            <label className="sr-only" htmlFor="industry">
+              Industry
+            </label>
+            <input
+              type="text"
+              name="industry"
+              placeholder="Industry"
+              id="industry"
               required
             />
           </div>
