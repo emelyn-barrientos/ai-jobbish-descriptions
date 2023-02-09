@@ -7,7 +7,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div>
+      <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-12">
         <form>
           <div>
             <label className="sr-only" htmlFor="jobTitle">
