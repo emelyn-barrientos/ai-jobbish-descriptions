@@ -15,6 +15,7 @@ export default function Dashboard() {
             </label>
             <input
               type="text"
+              className="block w-full rounded-md bg-white border border-gray-400 shadow-sm"
               name="jobTitle"
               placeholder="Job Title"
               id="jobTitle"
