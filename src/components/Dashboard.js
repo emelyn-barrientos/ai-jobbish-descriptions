@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 export default function Dashboard() {
   const [jobTitle, setJobTitle] = useState('')
+  const [industry, setIndustry] = useState('')
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
 
@@ -36,6 +37,7 @@ export default function Dashboard() {
               name="industry"
               placeholder="Industry"
               id="industry"
+              value={industry}
               required
             />
           </div>
