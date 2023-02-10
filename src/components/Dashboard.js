@@ -48,6 +48,13 @@ export default function Dashboard() {
             <label className="sr-only" htmlFor="keywords">
               Keywords for AI
             </label>
+            <textarea
+              rows={7}
+              name="keywords"
+              placeholder="Keywords for AI"
+              id="keywords"
+              required
+            />
           </div>
         </form>
       </div>
