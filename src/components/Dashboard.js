@@ -73,13 +73,20 @@ export default function Dashboard() {
               id="tone"
               value={tone}
               onChange={handleTone}
+              required
             >
-              <option value="default">Select Tone (Optional)</option>
+              <option value="default">Select Tone of Voice</option>
               <option value="casual">Casual</option>
               <option value="formal">Formal</option>
               <option value="professional">Professional</option>
               <option value="friendly">Friendly</option>
             </select>
+          </div>
+          {/* Word Count */}
+          <div className="flex flex-col">
+            <label className="sr-only" htmlFor="wordCount">
+              Word Count (Optional)
+            </label>
           </div>
         </form>
       </div>
