@@ -61,6 +61,12 @@ export default function Dashboard() {
               required
             />
           </div>
+          {/* Tone */}
+          <div>
+            <label className="sr-only" htmlFor="tone">
+              Tone
+            </label>
+          </div>
         </form>
       </div>
     </div>
