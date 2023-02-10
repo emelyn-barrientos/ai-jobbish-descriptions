@@ -7,6 +7,7 @@ export default function Dashboard() {
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
+  const handleKeyWords = (e) => setKeyWords(e.target.value)
 
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -56,6 +57,7 @@ export default function Dashboard() {
               placeholder="Keywords for AI"
               id="keywords"
               value={keyWords}
+              onChange={handleKeyWords}
               required
             />
           </div>
