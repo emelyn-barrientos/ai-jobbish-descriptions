@@ -87,6 +87,14 @@ export default function Dashboard() {
             <label className="sr-only" htmlFor="wordCount">
               Word Count (Optional)
             </label>
+            <input
+              type="number"
+              name="wordCount"
+              placeholder="Word Count - Default 200 (Optional)"
+              id="wordCount"
+              min={0}
+              max={800}
+            />
           </div>
         </form>
       </div>
