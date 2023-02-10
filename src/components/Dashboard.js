@@ -4,6 +4,7 @@ export default function Dashboard() {
   const [jobTitle, setJobTitle] = useState('')
   const [industry, setIndustry] = useState('')
   const [keyWords, setKeyWords] = useState('')
+  const [tone, setTone] = useState('')
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
@@ -70,6 +71,7 @@ export default function Dashboard() {
               className="block w-full rounded-md bg-white border border-gray-400 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm px-4 py-2 placeholder-gray-500 my-2 text-gray-900"
               name="tone"
               id="tone"
+              value={tone}
             >
               <option value="default">Select Tone (Optional)</option>
               <option value="casual">Casual</option>
