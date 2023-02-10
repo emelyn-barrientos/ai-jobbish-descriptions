@@ -50,6 +50,7 @@ export default function Dashboard() {
             </label>
             <textarea
               rows={7}
+              className="block w-full rounded-md bg-white border border-gray-400 shadow-sm"
               name="keywords"
               placeholder="Keywords for AI"
               id="keywords"
