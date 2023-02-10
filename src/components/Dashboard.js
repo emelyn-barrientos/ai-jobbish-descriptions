@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 export default function Dashboard() {
   const [jobTitle, setJobTitle] = useState('')
   const [industry, setIndustry] = useState('')
+  const [keyWords, setKeyWords] = useState('')
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
@@ -54,6 +55,7 @@ export default function Dashboard() {
               name="keywords"
               placeholder="Keywords for AI"
               id="keywords"
+              value={keyWords}
               required
             />
           </div>
