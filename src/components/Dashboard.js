@@ -9,7 +9,7 @@ export default function Dashboard() {
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
   const handleKeyWords = (e) => setKeyWords(e.target.value)
-
+  const handleTone = (e) => setTone(e.target.value)
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-12">
@@ -72,6 +72,7 @@ export default function Dashboard() {
               name="tone"
               id="tone"
               value={tone}
+              onChange={handleTone}
             >
               <option value="default">Select Tone (Optional)</option>
               <option value="casual">Casual</option>
