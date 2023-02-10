@@ -31,7 +31,7 @@ export default function Dashboard() {
             />
           </div>
           {/* Industry */}
-          <div>
+          <div className="flex flex-col">
             <label className="sr-only" htmlFor="industry">
               Industry
             </label>
@@ -47,7 +47,7 @@ export default function Dashboard() {
             />
           </div>
           {/* AI Keywords */}
-          <div>
+          <div className="flex flex-col">
             <label className="sr-only" htmlFor="keywords">
               Keywords for AI
             </label>
@@ -63,7 +63,7 @@ export default function Dashboard() {
             />
           </div>
           {/* Tone */}
-          <div>
+          <div className="flex flex-col">
             <label className="sr-only" htmlFor="tone">
               Tone
             </label>
