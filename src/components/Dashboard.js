@@ -43,6 +43,12 @@ export default function Dashboard() {
               required
             />
           </div>
+          {/* AI Keywords */}
+          <div>
+            <label className="sr-only" htmlFor="keywords">
+              Keywords for AI
+            </label>
+          </div>
         </form>
       </div>
     </div>
