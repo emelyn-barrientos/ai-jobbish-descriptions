@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 export default function Dashboard() {
   const [jobTitle, setJobTitle] = useState('')
   const [industry, setIndustry] = useState('')
+  const [keyWords, setKeyWords] = useState('')
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
+  const handleKeyWords = (e) => setKeyWords(e.target.value)
 
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -40,6 +42,22 @@ export default function Dashboard() {
               id="industry"
               value={industry}
               onChange={handleIndustry}
+              required
+            />
+          </div>
+          {/* AI Keywords */}
+          <div>
+            <label className="sr-only" htmlFor="keywords">
+              Keywords for AI
+            </label>
+            <textarea
+              rows={7}
+              className="block w-full rounded-md bg-white border border-gray-400 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm px-4 py-2 placeholder-gray-500 my-2 text-gray-900"
+              name="keywords"
+              placeholder="Keywords for AI"
+              id="keywords"
+              value={keyWords}
+              onChange={handleKeyWords}
               required
             />
           </div>
