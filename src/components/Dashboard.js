@@ -66,6 +66,13 @@ export default function Dashboard() {
             <label className="sr-only" htmlFor="tone">
               Tone
             </label>
+            <select name="tone" id="tone">
+              <option value="default">Select Tone (Optional)</option>
+              <option value="casual">Casual</option>
+              <option value="formal">Formal</option>
+              <option value="professional">Professional</option>
+              <option value="friendly">Friendly</option>
+            </select>
           </div>
         </form>
       </div>
