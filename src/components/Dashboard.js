@@ -78,7 +78,7 @@ export default function Dashboard() {
               onChange={handleTone}
               required
             >
-              <option value="default">Select Tone of Voice</option>
+              <option value="default">Select Tone</option>
               <option value="casual">Casual</option>
               <option value="formal">Formal</option>
               <option value="professional">Professional</option>
