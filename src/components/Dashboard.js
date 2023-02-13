@@ -16,6 +16,7 @@ export default function Dashboard() {
   const handleKeyWords = (e) => setKeyWords(e.target.value)
   const handleTone = (e) => setTone(e.target.value)
   const handleWordCount = (e) => setWordCount(e.target.value)
+  const handleJobDescription = (e) => setJobDescription(e.target.value)
 
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -136,6 +137,8 @@ export default function Dashboard() {
             name="output"
             placeholder="AI Generated Job Description"
             id="output"
+            value={jobDescription}
+            onChange={handleJobDescription}
             disabled={jobDescription === ''}
           />
         </div>
