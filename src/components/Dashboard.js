@@ -7,6 +7,8 @@ export default function Dashboard() {
   const [tone, setTone] = useState('')
   const [wordCount, setWordCount] = useState('')
 
+  const [isGenerating, setIsGenerating] = useState(false)
+
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
   const handleKeyWords = (e) => setKeyWords(e.target.value)
@@ -101,7 +103,16 @@ export default function Dashboard() {
               value={wordCount}
               onChange={handleWordCount}
             />
-            <button type="submit"></button>
+            <button
+              type="submit"
+              disabled={
+                isGenerating ||
+                jobTitle === '' ||
+                industry === '' ||
+                keyWords === '' ||
+                tone === ''
+              }
+            ></button>
           </div>
         </form>
       </div>
