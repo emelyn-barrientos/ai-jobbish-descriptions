@@ -10,6 +10,7 @@ export default function Dashboard() {
   const [wordCount, setWordCount] = useState('')
 
   const [isGenerating, setIsGenerating] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
@@ -141,7 +142,9 @@ export default function Dashboard() {
             onChange={handleJobDescription}
             disabled={jobDescription === ''}
           />
-          <button type="submit" disabled={jobDescription === ''}></button>
+          <button type="submit" disabled={jobDescription === ''}>
+            {isCopied ? 'Copied!' : 'Copy to Clipboard'}
+          </button>
         </div>
       </div>
     </div>
