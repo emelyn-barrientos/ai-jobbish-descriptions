@@ -10,6 +10,7 @@ export default function Dashboard() {
   const [wordCount, setWordCount] = useState('')
 
   const [isGenerating, setIsGenerating] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
@@ -17,6 +18,11 @@ export default function Dashboard() {
   const handleTone = (e) => setTone(e.target.value)
   const handleWordCount = (e) => setWordCount(e.target.value)
   const handleJobDescription = (e) => setJobDescription(e.target.value)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(jobDescription)
+    setIsCopied(true)
+  }
 
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -141,6 +147,14 @@ export default function Dashboard() {
             onChange={handleJobDescription}
             disabled={jobDescription === ''}
           />
+          <button
+            type="submit"
+            className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
+            onClick={handleCopy}
+            disabled={jobDescription === ''}
+          >
+            {isCopied ? 'Copied!' : 'Copy to Clipboard'}
+          </button>
         </div>
       </div>
     </div>
