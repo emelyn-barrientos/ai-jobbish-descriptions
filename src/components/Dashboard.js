@@ -19,6 +19,11 @@ export default function Dashboard() {
   const handleWordCount = (e) => setWordCount(e.target.value)
   const handleJobDescription = (e) => setJobDescription(e.target.value)
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(jobDescription)
+    setIsCopied(true)
+  }
+
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-12">
@@ -145,6 +150,7 @@ export default function Dashboard() {
           <button
             type="submit"
             className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
+            onClick={handleCopy}
             disabled={jobDescription === ''}
           >
             {isCopied ? 'Copied!' : 'Copy to Clipboard'}
