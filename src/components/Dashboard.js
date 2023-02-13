@@ -101,6 +101,7 @@ export default function Dashboard() {
               value={wordCount}
               onChange={handleWordCount}
             />
+            <button type="submit"></button>
           </div>
         </form>
       </div>
