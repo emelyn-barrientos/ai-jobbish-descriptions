@@ -112,7 +112,9 @@ export default function Dashboard() {
                 keyWords === '' ||
                 tone === ''
               }
-            ></button>
+            >
+              {isGenerating ? 'Generating...' : 'Generate Job Description'}
+            </button>
           </div>
         </form>
       </div>
