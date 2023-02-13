@@ -141,6 +141,7 @@ export default function Dashboard() {
             onChange={handleJobDescription}
             disabled={jobDescription === ''}
           />
+          <button type="submit" disabled={jobDescription === ''}></button>
         </div>
       </div>
     </div>
