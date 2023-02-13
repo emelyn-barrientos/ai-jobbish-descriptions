@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
 export default function Dashboard() {
+  const [jobDescription, setJobDescription] = useState('')
+
   const [jobTitle, setJobTitle] = useState('')
   const [industry, setIndustry] = useState('')
   const [keyWords, setKeyWords] = useState('')
@@ -14,6 +16,7 @@ export default function Dashboard() {
   const handleKeyWords = (e) => setKeyWords(e.target.value)
   const handleTone = (e) => setTone(e.target.value)
   const handleWordCount = (e) => setWordCount(e.target.value)
+  const handleJobDescription = (e) => setJobDescription(e.target.value)
 
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -103,6 +106,7 @@ export default function Dashboard() {
               value={wordCount}
               onChange={handleWordCount}
             />
+            {/* Generate Job Description */}
             <button
               type="submit"
               className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
@@ -118,6 +122,26 @@ export default function Dashboard() {
             </button>
           </div>
         </form>
+        {/* Job Description Output */}
+        <div className="flex flex-col">
+          <label className="sr-only" htmlFor="output">
+            Output
+          </label>
+          <textarea
+            rows={
+              jobDescription === ''
+                ? 7
+                : jobDescription.split('\\n').length + 12
+            }
+            className="block w-full rounded-md bg-white border border-gray-400 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm px-4 py-2 placeholder-gray-500 my-2 text-gray-900"
+            name="output"
+            placeholder="AI Generated Job Description"
+            id="output"
+            value={jobDescription}
+            onChange={handleJobDescription}
+            disabled={jobDescription === ''}
+          />
+        </div>
       </div>
     </div>
   )
