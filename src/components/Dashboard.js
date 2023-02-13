@@ -103,6 +103,7 @@ export default function Dashboard() {
               value={wordCount}
               onChange={handleWordCount}
             />
+            {/* Generate Job Description */}
             <button
               type="submit"
               className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
@@ -118,6 +119,12 @@ export default function Dashboard() {
             </button>
           </div>
         </form>
+        {/* Job Description Output */}
+        <div className="flex flex-col">
+          <label className="sr-only" htmlFor="output">
+            Output
+          </label>
+        </div>
       </div>
     </div>
   )
