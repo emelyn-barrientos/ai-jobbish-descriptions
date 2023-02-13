@@ -7,6 +7,8 @@ export default function Dashboard() {
   const [tone, setTone] = useState('')
   const [wordCount, setWordCount] = useState('')
 
+  const [isGenerating, setIsGenerating] = useState(false)
+
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
   const handleKeyWords = (e) => setKeyWords(e.target.value)
@@ -101,6 +103,19 @@ export default function Dashboard() {
               value={wordCount}
               onChange={handleWordCount}
             />
+            <button
+              type="submit"
+              className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
+              disabled={
+                isGenerating ||
+                jobTitle === '' ||
+                industry === '' ||
+                keyWords === '' ||
+                tone === ''
+              }
+            >
+              {isGenerating ? 'Generating...' : 'Generate Job Description'}
+            </button>
           </div>
         </form>
       </div>
