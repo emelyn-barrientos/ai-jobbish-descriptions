@@ -29,3 +29,7 @@ const generteDescription = async ({
     console.error(err)
   }
 }
+
+export default async function handler(req, res) {
+  const { jobTitle, industry, keyWords, tone, wordCount } = req.body
+}
