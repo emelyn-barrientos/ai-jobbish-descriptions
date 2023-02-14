@@ -15,6 +15,13 @@ const generteDescription = async ({
         'Content Type': 'applications/json',
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
+      body: JSON.stringify({
+        prompt: `Write a job description for a ${jobTitle} role in ${industry} that is ${
+          wordCount || 200
+        } words in a ${tone}. Incorporate the following keywords: ${keyWords}. The job position should be described in a way that is SEO friendly, highlighting its unique features and benefits.`,
+        max_tokens: 100,
+        temperature: 0.5,
+      }),
     })
   } catch (err) {
     console.error(err)
