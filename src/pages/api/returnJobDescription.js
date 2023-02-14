@@ -1,7 +1,7 @@
 const openAiUrl =
   'https://api.openai.com/v1/engines/text-davinci-003/completions'
 
-const generteDescription = async ({
+const generateDescription = async ({
   jobTitle,
   industry,
   keyWords,
@@ -32,4 +32,16 @@ const generteDescription = async ({
 
 export default async function handler(req, res) {
   const { jobTitle, industry, keyWords, tone, wordCount } = req.body
+
+  const jobDescription = await generateDescription({
+    jobTitle,
+    industry,
+    keyWords,
+    tone,
+    wordCount,
+  })
+
+  res.status(200).json({
+    jobDescription,
+  })
 }
