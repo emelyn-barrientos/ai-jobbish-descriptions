@@ -19,6 +19,11 @@ export default function Dashboard() {
   const handleWordCount = (e) => setWordCount(e.target.value)
   const handleJobDescription = (e) => setJobDescription(e.target.value)
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsGenerating(true)
+  }
+
   const handleCopy = () => {
     navigator.clipboard.writeText(jobDescription)
     setIsCopied(true)
