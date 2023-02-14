@@ -23,6 +23,8 @@ const generteDescription = async ({
         temperature: 0.5,
       }),
     })
+    const data = await response.json()
+    return data.choices[0].text
   } catch (err) {
     console.error(err)
   }
