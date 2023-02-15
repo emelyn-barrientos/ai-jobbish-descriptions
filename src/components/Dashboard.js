@@ -28,6 +28,13 @@ export default function Dashboard() {
       headers: {
         'Content-Type': 'application/json',
       },
+      body: JSON.stringify({
+        jobTitle,
+        industry,
+        keyWords,
+        tone,
+        wordCount,
+      }),
     })
   }
 
