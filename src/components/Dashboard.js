@@ -36,6 +36,9 @@ export default function Dashboard() {
         wordCount,
       }),
     })
+    setIsGenerating(false)
+    const data = await res.json()
+    setJobDescription(data.jobDescription.trim())
   }
 
   const handleCopy = () => {
