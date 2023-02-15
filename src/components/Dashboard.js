@@ -23,7 +23,7 @@ export default function Dashboard() {
     e.preventDefault()
     setIsGenerating(true)
 
-    const res = await fetch('../api/returnJobDescription.js', {
+    const res = await fetch('/api/returnJobDescription', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
