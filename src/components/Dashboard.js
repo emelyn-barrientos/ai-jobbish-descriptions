@@ -22,6 +22,13 @@ export default function Dashboard() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsGenerating(true)
+
+    const res = await fetch('../api/returnJobDescription.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
   }
 
   const handleCopy = () => {
