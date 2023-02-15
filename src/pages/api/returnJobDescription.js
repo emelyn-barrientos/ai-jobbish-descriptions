@@ -12,7 +12,7 @@ const generateDescription = async ({
     const response = await fetch(openAiUrl, {
       method: 'POST',
       headers: {
-        'Content Type': 'applications/json',
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
