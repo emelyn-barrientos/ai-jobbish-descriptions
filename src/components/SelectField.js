@@ -21,7 +21,14 @@ export default function SelectField({
           value={value}
           onChange={onChange}
           required={required}
-        />
+        >
+          <option value="default">Select {label}</option>
+          {option.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
       </div>
     </>
   )
