@@ -22,7 +22,16 @@ export default function Form(props) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        {/* Inudstry */}
+        {/* Job Title */}
+        <InputField
+          label="Job Title"
+          name="jobTitle"
+          type="text"
+          value={jobTitle}
+          onChange={handleJobTitle}
+          required
+        />
+        {/* Industry */}
         <InputField
           label="Industry"
           name="industry"
