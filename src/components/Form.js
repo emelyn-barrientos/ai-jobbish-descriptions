@@ -31,6 +31,14 @@ export default function Form(props) {
           onChange={handleIndustry}
           required
         />
+        {/* AI Keywords */}
+        <TextareaField
+          label="Keywords for AI"
+          name="keywords"
+          value={keyWords}
+          onChange={handleKeyWords}
+          required
+        />
       </form>
     </>
   )
