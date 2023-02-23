@@ -3,9 +3,35 @@ import InputField from './InputField'
 import TextareaField from './TextareaField'
 import SelectField from './SelectField'
 
-
-
 export default function Form(props) {
-  const { handleSubmit, handleJobTitle, handleIndustry, handleKeyWords, handleTone, handleWordCount, jobTitle, industry, keyWords, tone, wordCount, isGenerating } = props
-  return ()
+  const {
+    handleSubmit,
+    handleJobTitle,
+    handleIndustry,
+    handleKeyWords,
+    handleTone,
+    handleWordCount,
+    jobTitle,
+    industry,
+    keyWords,
+    tone,
+    wordCount,
+    isGenerating,
+  } = props
+
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        {/* Inudstry */}
+        <InputField
+          label="Industry"
+          name="industry"
+          type="text"
+          value={industry}
+          onChange={handleIndustry}
+          required
+        />
+      </form>
+    </>
+  )
 }
