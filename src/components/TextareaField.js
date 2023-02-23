@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function InputField({
+export default function TextareaField({
   label,
   name,
   placeholder,
