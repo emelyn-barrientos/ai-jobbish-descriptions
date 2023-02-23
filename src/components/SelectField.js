@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function TextareaField({
+export default function SelectField({
   label,
   name,
   placeholder,
