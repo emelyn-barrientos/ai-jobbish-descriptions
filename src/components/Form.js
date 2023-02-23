@@ -63,6 +63,16 @@ export default function Form(props) {
           ]}
           required
         />
+        {/* Word Count */}
+        <InputField
+          label="Word Count (Optional)"
+          name="wordCount"
+          type="number"
+          min={0}
+          max={800}
+          value={wordCount}
+          onChange={handleWordCount}
+        />
       </form>
     </>
   )
