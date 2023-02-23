@@ -39,6 +39,21 @@ export default function Form(props) {
           onChange={handleKeyWords}
           required
         />
+        {/* Tone */}
+        <SelectField
+          label="Tone"
+          name="tone"
+          value={tone}
+          onChange={handleTone}
+          options={[
+            { lable: 'Select Tone', value: 'default' },
+            { label: 'Casual', value: 'casual' },
+            { label: 'Formal', value: 'formal' },
+            { label: 'Professional', value: 'professional' },
+            { label: 'Friendly', value: 'friendly' },
+          ]}
+          required
+        />
       </form>
     </>
   )
