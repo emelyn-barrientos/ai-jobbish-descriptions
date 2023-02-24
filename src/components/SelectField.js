@@ -1,9 +1,10 @@
+import { optimizeFonts } from 'next.config'
 import React, { useState } from 'react'
 
 export default function SelectField({
   label,
   name,
-  placeholder,
+  options,
   value,
   onChange,
   required = false,
@@ -23,7 +24,7 @@ export default function SelectField({
           required={required}
         >
           <option value="default">Select {label}</option>
-          {option.map((option) => (
+          {options.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
             </option>

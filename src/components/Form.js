@@ -27,6 +27,7 @@ export default function Form(props) {
         <InputField
           label="Job Title"
           name="jobTitle"
+          placeholder="Job Title"
           type="text"
           value={jobTitle}
           onChange={handleJobTitle}
@@ -36,6 +37,7 @@ export default function Form(props) {
         <InputField
           label="Industry"
           name="industry"
+          placeholder="Industry"
           type="text"
           value={industry}
           onChange={handleIndustry}
@@ -45,6 +47,7 @@ export default function Form(props) {
         <TextareaField
           label="Keywords for AI"
           name="keywords"
+          placeholder="Keywords for AI"
           value={keyWords}
           onChange={handleKeyWords}
           required
@@ -56,7 +59,7 @@ export default function Form(props) {
           value={tone}
           onChange={handleTone}
           options={[
-            { lable: 'Select Tone', value: 'default' },
+            // { label: 'Select Tone', value: 'default' },
             { label: 'Casual', value: 'casual' },
             { label: 'Formal', value: 'formal' },
             { label: 'Professional', value: 'professional' },
@@ -68,6 +71,7 @@ export default function Form(props) {
         <InputField
           label="Word Count (Optional)"
           name="wordCount"
+          placeholder="Word Count (optional)"
           type="number"
           min={0}
           max={800}
