@@ -13,7 +13,6 @@ export default function Dashboard() {
   const [wordCount, setWordCount] = useState('')
 
   const [isGenerating, setIsGenerating] = useState(false)
-  const [isCopied, setIsCopied] = useState(false)
 
   const handleJobTitle = (e) => setJobTitle(e.target.value)
   const handleIndustry = (e) => setIndustry(e.target.value)
@@ -42,11 +41,6 @@ export default function Dashboard() {
     setIsGenerating(false)
     const data = await res.json()
     setJobDescription(data.jobDescription.trim())
-  }
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(jobDescription)
-    setIsCopied(true)
   }
 
   return (
