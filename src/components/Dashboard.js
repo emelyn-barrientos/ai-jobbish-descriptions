@@ -67,7 +67,6 @@ export default function Dashboard() {
           wordCount={wordCount}
           isGenerating={isGenerating}
           isCopied={isCopied}
-          onCopy={handleCopy}
           jobDescription={jobDescription}
         />
         {/* Job Description Output */}
