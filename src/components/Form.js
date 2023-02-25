@@ -2,24 +2,22 @@ import React from 'react'
 import InputField from './InputField'
 import TextareaField from './TextareaField'
 import SelectField from './SelectField'
-import Button from './Button'
+import SubmitButton from './SubmitButton'
 
-export default function Form(props) {
-  const {
-    handleSubmit,
-    handleJobTitle,
-    handleIndustry,
-    handleKeyWords,
-    handleTone,
-    handleWordCount,
-    jobTitle,
-    industry,
-    keyWords,
-    tone,
-    wordCount,
-    isGenerating,
-  } = props
-
+export default function Form({
+  handleSubmit,
+  handleJobTitle,
+  handleIndustry,
+  handleKeyWords,
+  handleTone,
+  handleWordCount,
+  jobTitle,
+  industry,
+  keyWords,
+  tone,
+  wordCount,
+  isGenerating,
+}) {
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -79,18 +77,14 @@ export default function Form(props) {
           onChange={handleWordCount}
         />
         {/* Generate Job Description */}
-        <Button
-          type="submit"
-          className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
-          disabled={
-            isGenerating ||
-            jobTitle === '' ||
-            industry === '' ||
-            keyWords === '' ||
-            tone === ''
-          }
+        <SubmitButton
+          jobtitle={jobTitle}
+          industry={industry}
+          keyWords={keyWords}
+          tone={tone}
+          wordCount={wordCount}
+          isGenerating={isGenerating}
         />
-        {isGenerating ? 'Generating...' : 'Generate Job Description'}
       </form>
     </>
   )
