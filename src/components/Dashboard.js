@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import Form from './Form'
+import JobDescriptionOutput from './JobDescriptionOutput'
 
 export default function Dashboard() {
   const [jobDescription, setJobDescription] = useState('')
@@ -69,35 +70,17 @@ export default function Dashboard() {
           onCopy={handleCopy}
           jobDescription={jobDescription}
         />
-        {/* Job Description Output */}*{' '}
-        <div className="flex flex-col">
-          <label className="sr-only" htmlFor="output">
-            Output
-          </label>
-          <textarea
-            rows={
-              jobDescription === ''
-                ? 7
-                : jobDescription.split('\\n').length + 12
-            }
-            className="block w-full rounded-md bg-white border border-gray-400 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm px-4 py-2 placeholder-gray-500 my-2 text-gray-900"
-            name="output"
-            placeholder="AI Generated Job Description"
-            id="output"
-            value={jobDescription}
-            onChange={handleJobDescription}
-            disabled={jobDescription === ''}
-          />
-          {/* Copy Button */}
-          <button
-            type="submit"
-            className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
-            onClick={handleCopy}
-            disabled={jobDescription === ''}
-          >
-            {isCopied ? 'Copied!' : 'Copy to Clipboard'}
-          </button>
-        </div>
+        {/* Job Description Output */}
+        <JobDescriptionOutput jobDescription={jobDescription} />
+        {/* Copy Button */}
+        <button
+          type="submit"
+          className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
+          onClick={handleCopy}
+          disabled={jobDescription === ''}
+        >
+          {isCopied ? 'Copied!' : 'Copy to Clipboard'}
+        </button>
       </div>
     </div>
   )
