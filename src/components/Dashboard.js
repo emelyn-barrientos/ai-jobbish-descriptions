@@ -69,8 +69,8 @@ export default function Dashboard() {
           onCopy={handleCopy}
           jobDescription={jobDescription}
         />
-        {/* Job Description Output */}
-        {/* <div className="flex flex-col">
+        {/* Job Description Output */}*{' '}
+        <div className="flex flex-col">
           <label className="sr-only" htmlFor="output">
             Output
           </label>
@@ -89,7 +89,7 @@ export default function Dashboard() {
             disabled={jobDescription === ''}
           />
           {/* Copy Button */}
-        {/* <button
+          <button
             type="submit"
             className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
             onClick={handleCopy}
@@ -97,7 +97,7 @@ export default function Dashboard() {
           >
             {isCopied ? 'Copied!' : 'Copy to Clipboard'}
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   )

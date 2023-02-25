@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Output({ jobDescription }) {
+export default function JobDescriptionOutput({ jobDescription }) {
   return (
     <>
       <div className="flex flex-col">
