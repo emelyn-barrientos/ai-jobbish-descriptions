@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CopyButton from './CopyButton'
 
 import Form from './Form'
 import JobDescriptionOutput from './JobDescriptionOutput'
@@ -62,15 +63,16 @@ export default function Dashboard() {
         />
         {/* Job Description Output */}
         <JobDescriptionOutput jobDescription={jobDescription} />
-        {/* Copy Button */}
-        <button
+        {/* Copy Job Description Button */}
+        <CopyButton text={jobDescription} />
+        {/* <button
           type="submit"
           className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
           onClick={handleCopy}
           disabled={jobDescription === ''}
         >
           {isCopied ? 'Copied!' : 'Copy to Clipboard'}
-        </button>
+        </button> */}
       </div>
     </div>
   )
