@@ -19,7 +19,6 @@ export default function Dashboard() {
   const handleKeyWords = (e) => setKeyWords(e.target.value)
   const handleTone = (e) => setTone(e.target.value)
   const handleWordCount = (e) => setWordCount(e.target.value)
-  // const handleJobDescription = (e) => setJobDescription(e.target.value)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
