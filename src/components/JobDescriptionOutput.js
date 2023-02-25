@@ -1,5 +1,7 @@
 import React from 'react'
 
+import CopyButton from './CopyButton'
+
 export default function JobDescriptionOutput({ jobDescription }) {
   return (
     <>
@@ -18,6 +20,7 @@ export default function JobDescriptionOutput({ jobDescription }) {
           value={jobDescription}
           disabled={jobDescription === ''}
         />
+        <CopyButton jobDescription={jobDescription} />
       </div>
     </>
   )
