@@ -59,15 +59,12 @@ export default function Dashboard() {
           handleKeyWords={handleKeyWords}
           handleTone={handleTone}
           handleWordCount={handleWordCount}
-          handleJobDescription={handleJobDescription}
           jobTitle={jobTitle}
           industry={industry}
           keyWords={keyWords}
           tone={tone}
           wordCount={wordCount}
           isGenerating={isGenerating}
-          isCopied={isCopied}
-          jobDescription={jobDescription}
         />
         {/* Job Description Output */}
         <JobDescriptionOutput jobDescription={jobDescription} />
