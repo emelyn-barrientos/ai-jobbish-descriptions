@@ -67,9 +67,9 @@ export default function Form({
         />
         {/* Word Count */}
         <InputField
-          label="Word Count (Optional)"
+          label="Word Count"
           name="wordCount"
-          placeholder="Word Count (optional)"
+          placeholder="Word Count (default 200)"
           type="number"
           min={0}
           max={800}
