@@ -75,6 +75,7 @@ export default function Form({
           max={800}
           value={wordCount}
           onChange={handleWordCount}
+          required
         />
         {/* Generate Job Description */}
         <SubmitButton
