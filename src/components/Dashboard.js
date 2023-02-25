@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import CopyButton from './CopyButton'
 
 import Form from './Form'
 import JobDescriptionOutput from './JobDescriptionOutput'
