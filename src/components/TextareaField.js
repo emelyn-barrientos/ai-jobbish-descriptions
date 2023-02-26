@@ -6,7 +6,7 @@ export default function TextareaField({
   placeholder,
   value,
   onChange,
-  required = false,
+  required,
 }) {
   return (
     <>

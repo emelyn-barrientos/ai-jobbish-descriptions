@@ -18,7 +18,8 @@ export default function SubmitButton({
           jobTitle === '' ||
           industry === '' ||
           keyWords === '' ||
-          tone === ''
+          tone === '' ||
+          wordCount === ''
         }
       >
         {isGenerating ? 'Generating...' : 'Generate Job Description'}
