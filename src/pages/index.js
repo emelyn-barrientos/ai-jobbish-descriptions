@@ -16,19 +16,12 @@ export default function Home() {
       <main className={'bg-white min-h-screen '}>
         <div className="flex flex-col items-center justify-center px-4 py-2">
           <h1 className="text-4xl md:text-6xl font-bold">
-            AI Job Description Generator
+            Jobbish Descriptions
             <span className="text-4xl md:text-6xl font-bold text-blue-600">
               .
             </span>
           </h1>
-          <p className="mt-3 text-2xl">
-            Create Beautiful
-            <span className="text-2xl font-bold text-blue-600">
-              {' '}
-              Job Descriptions{' '}
-            </span>
-            in Seconds
-          </p>
+          <p className="mt-3 text-2xl">Writing Job Ads Has Never Been Easier</p>
         </div>
         <Dashboard />
       </main>
