@@ -15,13 +15,15 @@ export default function Home() {
       </Head>
       <main className={'bg-oxford-blue min-h-screen '}>
         <div className="flex flex-col items-center justify-center px-4 py-2">
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl md:text-6xl font-bold text-stone-100">
             Jobbish Descriptions
             <span className="text-4xl md:text-6xl font-bold text-accent-aero">
               .
             </span>
           </h1>
-          <p className="mt-3 text-2xl">Writing Job Ads Has Never Been Easier</p>
+          <p className="mt-3 text-2xl text-stone-100">
+            Writing Job Ads Has Never Been Easier
+          </p>
         </div>
         <Dashboard />
       </main>
