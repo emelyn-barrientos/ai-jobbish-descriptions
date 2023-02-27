@@ -22,7 +22,9 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-3 text-2xl text-stone-100">
-            Writing Job Ads Has Never Been Easier
+            Writing {''}{' '}
+            <span className=" text-accent-pink font-bold">Job Ads</span>
+            {''} Has Never Been Easier
           </p>
         </div>
         <Dashboard />
