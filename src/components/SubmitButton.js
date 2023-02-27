@@ -12,7 +12,7 @@ export default function SubmitButton({
     <>
       <button
         type="submit"
-        className="bg-accent-aero w-full cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
+        className="bg-accent-aero w-full hover:bg-accent-pink cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
         disabled={
           isGenerating ||
           jobTitle === '' ||
