@@ -4,7 +4,13 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'oxford-blue': '#14233E',
+        'accent-aero': '#63B4D1',
+        'accent-pink': '#F540BE',
+      },
+    },
   },
   plugins: [],
 }
