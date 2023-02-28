@@ -6,8 +6,10 @@ export default function InputField({
   placeholder,
   value,
   onChange,
-  required = false,
+  required,
 }) {
+  const [isFilled, setIsFilled] = useState(false)
+
   return (
     <>
       <div className="flex flex-col">
