@@ -12,7 +12,7 @@ export default function SubmitButton({
     <>
       <button
         type="submit"
-        className="bg-accent-aero w-full hover:bg-accent-pink cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded"
+        className="btn relative inline-block font-medium group"
         disabled={
           isGenerating ||
           jobTitle === '' ||
@@ -22,7 +22,11 @@ export default function SubmitButton({
           wordCount === ''
         }
       >
-        {isGenerating ? 'Generating...' : 'Generate Job Description'}
+        <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+        <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-red-300"></span>
+        <span className="relative text-black group-hover:text-white">
+          {isGenerating ? 'Generating...' : 'Generate Job Description'}
+        </span>
       </button>
     </>
   )
