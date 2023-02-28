@@ -10,6 +10,9 @@ module.exports = {
         'accent-aero': '#63B4D1',
         'accent-pink': '#F540BE',
       },
+      fontFamily: {
+        sans: ['Space Grotesk', 'sans-serif'],
+      },
     },
   },
   plugins: [],
