@@ -57,7 +57,6 @@ export default function Form({
           value={tone}
           onChange={handleTone}
           options={[
-            // { label: 'Select Tone', value: 'default' },
             { label: 'Casual', value: 'casual' },
             { label: 'Formal', value: 'formal' },
             { label: 'Professional', value: 'professional' },
