@@ -8,6 +8,12 @@ export default function TextareaField({
   onChange,
   required,
 }) {
+  const [isFilled, setIsFilled] = useState(true)
+
+  const handleBlur = () => {
+    setIsFilled(Boolean(value))
+  }
+
   return (
     <>
       <div className="flex flex-col">
@@ -22,6 +28,7 @@ export default function TextareaField({
           id={name}
           value={value}
           onChange={onChange}
+          onBlur={handleBlur}
           required={required}
         />
       </div>
