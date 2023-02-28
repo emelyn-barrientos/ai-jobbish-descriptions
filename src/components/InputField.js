@@ -8,9 +8,9 @@ export default function InputField({
   onChange,
   required,
 }) {
-  const [isFilled, setIsFilled] = useState(false)
+  const [isFilled, setIsFilled] = useState(true)
 
-  const handleBlu = () => {
+  const handleBlur = () => {
     setIsFilled(Boolean(value))
   }
 
@@ -31,6 +31,14 @@ export default function InputField({
           onBlur={handleBlur}
           required={required}
         />
+        {required && !isFilled && (
+          <p
+            className="error
+        "
+          >
+            This field is required
+          </p>
+        )}
       </div>
     </>
   )
