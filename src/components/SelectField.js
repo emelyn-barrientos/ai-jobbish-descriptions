@@ -27,6 +27,7 @@ export default function SelectField({
           id={name}
           value={value}
           onChange={onChange}
+          onBlur={handleBlur}
           required={required}
         >
           <option value="default">Select {label}</option>
