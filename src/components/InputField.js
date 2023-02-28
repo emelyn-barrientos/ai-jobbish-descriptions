@@ -32,12 +32,7 @@ export default function InputField({
           required={required}
         />
         {required && !isFilled && (
-          <p
-            className="error
-        "
-          >
-            This field is required
-          </p>
+          <p className="error text-sm text-red-500">This field is required!</p>
         )}
       </div>
     </>
