@@ -8,12 +8,6 @@ export default function SelectField({
   onChange,
   required,
 }) {
-  const [isFilled, setIsFilled] = useState(true)
-
-  const handleBlur = () => {
-    setIsFilled(Boolean(value))
-  }
-
   return (
     <>
       <div className="flex flex-col">
@@ -27,7 +21,6 @@ export default function SelectField({
           id={name}
           value={value}
           onChange={onChange}
-          onBlur={handleBlur}
           required={required}
         >
           <option value="default">Select {label}</option>
