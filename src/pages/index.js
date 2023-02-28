@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-oxford-blue pt-10 pr-5 pl-5 min-h-screen ">
+      <main className="bg-oxford-blue pt-10 pb-10 pr-5 pl-5 min-h-screen ">
         <div className="flex flex-col items-center justify-center px-4 py-2">
           <h1 className="text-4xl md:text-6xl font-bold text-stone-100">
             Job<span className="text-accent-aero">-</span>ish
