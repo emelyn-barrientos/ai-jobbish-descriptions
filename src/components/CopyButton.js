@@ -16,7 +16,6 @@ export default function CopyButton({ jobDescription }) {
         btn
         relative
         w-full
-        rou
         mt-6
         py-2
         px-4
