@@ -10,6 +10,10 @@ export default function InputField({
 }) {
   const [isFilled, setIsFilled] = useState(false)
 
+  const handleBlu = () => {
+    setIsFilled(Boolean(value))
+  }
+
   return (
     <>
       <div className="flex flex-col">
@@ -24,6 +28,7 @@ export default function InputField({
           id={name}
           value={value}
           onChange={onChange}
+          onBlur={handleBlur}
           required={required}
         />
       </div>
