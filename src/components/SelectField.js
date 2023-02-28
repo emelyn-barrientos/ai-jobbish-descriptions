@@ -1,4 +1,3 @@
-import { optimizeFonts } from 'next.config'
 import React, { useState } from 'react'
 
 export default function SelectField({
@@ -7,8 +6,14 @@ export default function SelectField({
   options,
   value,
   onChange,
-  required = false,
+  required,
 }) {
+  const [isFilled, setIsFilled] = useState(true)
+
+  const handleBlur = () => {
+    setIsFilled(Boolean(value))
+  }
+
   return (
     <>
       <div className="flex flex-col">
