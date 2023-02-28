@@ -39,7 +39,7 @@ export default function Dashboard() {
     })
     setIsGenerating(false)
     const data = await res.json()
-    setJobDescription(data.jobDescription)
+    setJobDescription(data.jobDescription.trim())
   }
 
   return (
