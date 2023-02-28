@@ -31,6 +31,9 @@ export default function TextareaField({
           onBlur={handleBlur}
           required={required}
         />
+        {required && !isFilled && (
+          <p className="error text-sm text-red-500">This field is required!</p>
+        )}
       </div>
     </>
   )
