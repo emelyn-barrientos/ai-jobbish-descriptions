@@ -1,4 +1,3 @@
-import { optimizeFonts } from 'next.config'
 import React, { useState } from 'react'
 
 export default function SelectField({
@@ -7,7 +6,7 @@ export default function SelectField({
   options,
   value,
   onChange,
-  required = false,
+  required,
 }) {
   return (
     <>
