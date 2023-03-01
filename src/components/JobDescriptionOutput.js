@@ -18,6 +18,7 @@ export default function JobDescriptionOutput({ jobDescription }) {
           placeholder="AI Generated Job Description"
           id="output"
           value={jobDescription}
+          // onChange={handleSubmit}
           disabled={jobDescription === ''}
         />
         <CopyButton jobDescription={jobDescription} />

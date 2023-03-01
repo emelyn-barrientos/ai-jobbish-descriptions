@@ -39,7 +39,7 @@ export default function Dashboard() {
     })
     setIsGenerating(false)
     const data = await res.json()
-    setJobDescription(jobDescription.trim())
+    setJobDescription(data.jobDescription.trim())
   }
 
   return (
@@ -59,7 +59,10 @@ export default function Dashboard() {
           wordCount={wordCount}
           isGenerating={isGenerating}
         />
-        <JobDescriptionOutput jobDescription={jobDescription} />
+        <JobDescriptionOutput
+          jobDescription={jobDescription}
+          handleSubmit={handleSubmit}
+        />
       </div>
     </div>
   )
