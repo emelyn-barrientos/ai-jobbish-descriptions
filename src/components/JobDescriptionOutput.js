@@ -2,7 +2,7 @@ import React from 'react'
 
 import CopyButton from './CopyButton'
 
-export default function JobDescriptionOutput({ jobDescription }) {
+export default function JobDescriptionOutput({ jobDescription, handleSubmit }) {
   return (
     <>
       <div className="flex flex-col">
@@ -18,6 +18,7 @@ export default function JobDescriptionOutput({ jobDescription }) {
           placeholder="AI Generated Job Description"
           id="output"
           value={jobDescription}
+          onChange={handleSubmit}
           disabled={jobDescription === ''}
         />
         <CopyButton jobDescription={jobDescription} />
