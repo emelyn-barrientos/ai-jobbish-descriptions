@@ -2,13 +2,11 @@
 
 Everyone's talking about ChatGPT and whilst I love using it as a tool to help me learn, I wanted to explore using the OpenAI API.
 
-To create Job-ish, I initially followed this [freeCodeCamp.org](https://www.freecodecamp.org/news/build-a-job-description-generator-with-nextjs-and-chatgpt/) tutorial. I wanted to challenge myself more by refactoring to follow clean code practises by breaking down each segment into separate, reuseable components. 
+To create Job-ish, I initially followed tutorial to help me understand the OpenAI API. Once I got the MVP of my app working I challenge myself to refactoring for clean code practises by breaking down each segment into separate, reuseable components. 
 
 This project was a fantastic exercise for me in passing props effectively from parent to child components as well as handling multiple useState hooks. I'm interested in stretching this a bit further and creating multiple different forms with other prompts to request from the OpenAI API. 
 
-The deployed app is below. However, I'm currently troubleshooting a trim() method issue in production to actually getr the job description generated. the app works perfectly in playground thought!  
-
-🔗 https://job-ish.vercel.app/
+I'm currently troubleshooting a trim() method issue in production to actually getr the job description generated. the app works perfectly in playground thought! I will update when the live app is working again. 
 
 ## TECH USED 👩🏽‍💻 ##
 - JavaScript
