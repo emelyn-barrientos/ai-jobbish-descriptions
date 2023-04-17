@@ -11,6 +11,8 @@ export default function JobDescriptionOutput({ jobDescription }) {
     }
   }, [])
 
+  const [jobDescriptionState, setJobDescriptionState] = useState(jobDescription)
+
   const setJobDescriptionSafe = (value) => {
     if (isMountedRef.current) {
       setJobDescription(value)
@@ -19,7 +21,7 @@ export default function JobDescriptionOutput({ jobDescription }) {
 
   const handleChange = (event) => {
     const value = event.target.value
-    setJobDescriptionSafe(value)
+    setJobDescriptionState(value)
   }
 
   return (
