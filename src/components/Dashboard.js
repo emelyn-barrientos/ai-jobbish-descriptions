@@ -24,22 +24,33 @@ export default function Dashboard() {
     e.preventDefault()
     setIsGenerating(true)
 
-    const res = await fetch('/api/returnJobDescription', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        jobTitle,
-        industry,
-        keyWords,
-        tone,
-        wordCount,
-      }),
-    })
-    setIsGenerating(false)
-    const data = await res.json()
-    setJobDescription(data.jobDescription.trim())
+    try {
+      const res = await fetch('/api/returnJobDescription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          jobTitle,
+          industry,
+          keyWords,
+          tone,
+          wordCount,
+        }),
+      })
+
+      setIsGenerating(false)
+
+      if (!res.ok) {
+        throw new Error('Network response was not ok')
+      }
+
+      const data = await res.json()
+      setJobDescription(data.jobDescription.trim())
+    } catch (error) {
+      console.error('There was an error:', error)
+      setIsGenerating(false)
+    }
   }
 
   return (
