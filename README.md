@@ -1,5 +1,7 @@
 # About Job-ish 💼 # 
 
+🔗 https://job-ish.vercel.app/
+
 Everyone's talking about ChatGPT and whilst I love using it as a tool to help me learn, I wanted to explore using the OpenAI API.
 
 To create Job-ish, I initially followed tutorial to help me understand the OpenAI API. Once I got the MVP of my app working I challenge myself to refactoring for clean code practises by breaking down each segment into separate, reuseable components. 
@@ -18,7 +20,7 @@ I'm currently troubleshooting a trim() method issue in production to actually ge
 
 
 ## NEXT STEPS ▶️ ##
-- [ ] Fix trim method issue in production
+- [X] Fix trim method issue in production
 - [ ] Add reset button
 
 
