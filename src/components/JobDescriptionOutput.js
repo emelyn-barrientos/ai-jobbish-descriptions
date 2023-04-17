@@ -4,6 +4,13 @@ import CopyButton from './CopyButton'
 export default function JobDescriptionOutput({ jobDescription }) {
   const isMountedRef = useRef(false)
 
+  useEffect(() => {
+    isMountedRef.current = true
+    return () => {
+      isMountedRef.current = false
+    }
+  }, [])
+
   return (
     <>
       <div className="flex flex-col">
