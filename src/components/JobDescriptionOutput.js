@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react'
 import CopyButton from './CopyButton'
 
 export default function JobDescriptionOutput({ jobDescription }) {
-  console.log('jobDescription: ', jobDescription)
   const isMountedRef = useRef(false)
 
   useEffect(() => {
@@ -16,6 +15,11 @@ export default function JobDescriptionOutput({ jobDescription }) {
     if (isMountedRef.current) {
       setJobDescription(value)
     }
+  }
+
+  const handleChange = (event) => {
+    const value = event.target.value
+    setJobDescriptionSafe(value)
   }
 
   return (
@@ -32,7 +36,8 @@ export default function JobDescriptionOutput({ jobDescription }) {
           name="output"
           placeholder="AI Generated Job Description"
           id="output"
-          defaultValue={jobDescription}
+          value={jobDescription}
+          onChange={handleChange}
         />
         <CopyButton jobDescription={jobDescription} />
       </div>
