@@ -46,7 +46,12 @@ export default function Dashboard() {
       }
 
       const data = await res.json()
-      setJobDescription(data.jobDescription.trim())
+
+      if (data.jobDescription) {
+        setJobDescription(data.jobDescription.trim())
+      } else {
+        console.error('Job description is undefined')
+      }
     } catch (error) {
       console.error('There was an error:', error)
       setIsGenerating(false)
