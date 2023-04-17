@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react'
 import CopyButton from './CopyButton'
 
 export default function JobDescriptionOutput({ jobDescription }) {
+  const isMountedRef = useRef(false)
+
   return (
     <>
       <div className="flex flex-col">
