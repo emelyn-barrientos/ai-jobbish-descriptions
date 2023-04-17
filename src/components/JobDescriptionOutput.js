@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react'
 import CopyButton from './CopyButton'
 
 export default function JobDescriptionOutput({ jobDescription }) {
-  console.log('jobDescription: ', jobDescription)
   const isMountedRef = useRef(false)
 
   useEffect(() => {
