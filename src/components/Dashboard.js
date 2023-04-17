@@ -46,12 +46,10 @@ export default function Dashboard() {
       }
 
       const data = await res.json()
+      console.log('Data:', data) // Check the data being returned from the server
+      console.log('Job description:', data.jobDescription) // Check if jobDescription property is defined
 
-      if (data.jobDescription) {
-        setJobDescription(data.jobDescription.trim())
-      } else {
-        console.error('Job description is undefined')
-      }
+      setJobDescription(data.jobDescription.trim())
     } catch (error) {
       console.error('There was an error:', error)
       setIsGenerating(false)
