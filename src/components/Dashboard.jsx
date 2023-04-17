@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-
 import Form from './Form'
 import JobDescriptionOutput from './JobDescriptionOutput'
+import { useState } from 'react'
 
 export default function Dashboard() {
   const [jobDescription, setJobDescription] = useState('')

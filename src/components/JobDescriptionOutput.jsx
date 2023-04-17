@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react'
 import CopyButton from './CopyButton'
+import { useState, useRef, useEffect } from 'react'
 
 export default function JobDescriptionOutput({ jobDescription }) {
   const isMountedRef = useRef(false)

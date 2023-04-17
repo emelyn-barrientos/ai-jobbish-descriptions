@@ -1,4 +1,3 @@
-import React from 'react'
 import InputField from './InputField'
 import TextareaField from './TextareaField'
 import SelectField from './SelectField'
