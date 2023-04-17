@@ -17,6 +17,11 @@ export default function JobDescriptionOutput({ jobDescription }) {
     }
   }
 
+  const handleChange = (event) => {
+    const value = event.target.value
+    setJobDescriptionSafe(value)
+  }
+
   return (
     <>
       <div className="flex flex-col">
@@ -31,7 +36,8 @@ export default function JobDescriptionOutput({ jobDescription }) {
           name="output"
           placeholder="AI Generated Job Description"
           id="output"
-          defaultValue={jobDescription}
+          value={jobDescription}
+          onChange={handleChange}
         />
         <CopyButton jobDescription={jobDescription} />
       </div>
