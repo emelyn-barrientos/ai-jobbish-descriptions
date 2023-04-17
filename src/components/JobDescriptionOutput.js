@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import CopyButton from './CopyButton'
 
 export default function JobDescriptionOutput({ jobDescription }) {
@@ -11,9 +11,15 @@ export default function JobDescriptionOutput({ jobDescription }) {
     }
   }, [])
 
+  const [jobDescriptionState, setJobDescriptionState] = useState(jobDescription)
+
+  useEffect(() => {
+    setJobDescriptionState(jobDescription)
+  }, [jobDescription])
+
   const setJobDescriptionSafe = (value) => {
     if (isMountedRef.current) {
-      setJobDescription(value)
+      setJobDescriptionState(value)
     }
   }
 
@@ -30,16 +36,18 @@ export default function JobDescriptionOutput({ jobDescription }) {
         </label>
         <textarea
           rows={
-            jobDescription === '' ? 7 : jobDescription.split('\\n').length + 12
+            jobDescriptionState === ''
+              ? 7
+              : jobDescriptionState.split('\\n').length + 12
           }
           className="block w-full rounded-md bg-stone-100 border-2 border-accent-aero focus:outline-none focus:border-accent-pink sm:text-sm px-4 py-2 placeholder-gray-500 my-2 text-gray-900"
           name="output"
           placeholder="AI Generated Job Description"
           id="output"
-          value={jobDescription}
+          value={jobDescriptionState}
           onChange={handleChange}
         />
-        <CopyButton jobDescription={jobDescription} />
+        <CopyButton jobDescription={jobDescriptionState} />
       </div>
     </>
   )
