@@ -7,13 +7,13 @@ export default function Footer() {
         <p className="text-sm">
           Created by{' '}
           <Link
+            className=" text-accent-pink font-bold hover:text-accent-aero hover:underline"
             href="https://www.emelynbarrientos.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Emelyn Barrientos
           </Link>
-          .
         </p>
         <p>Built with Next.js & Tailwind CSS</p>
       </div>
