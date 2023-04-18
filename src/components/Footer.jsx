@@ -1,21 +1,23 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <>
-      <div className="text-center flex justify-center mb-4">
-        <h6 className="text-xs mb-1 sm:text-center">
-          Built with Next.js & Tailwind CSS
-        </h6>
-        <h6 className="text-xs mb-1 sm:text-center">
-          Illustrations by the talented{' '}
-          <a
-            className="underline underline-offset-2 decoration-1 transition ease-in-out hover:text-accent-green hover:duration-75"
-            href="https://rubyash.com/"
+      <div className="text-center flex flex-col justify-center mb-4">
+        <p>
+          Created by{' '}
+          <Link
+            href="https://www.emelynbarrientos.com/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
-            Ruby Ash
-          </a>
-        </h6>
+            Emelyn Barrientos
+          </Link>
+          .
+        </p>
+        <p className="text-xs mb-1 sm:text-center">
+          Built with Next.js & Tailwind CSS
+        </p>
       </div>
     </>
   )
