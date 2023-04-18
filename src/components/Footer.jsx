@@ -3,8 +3,8 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <>
-      <div className="text-center flex flex-col justify-center mb-4">
-        <p>
+      <div className="text-center text-sm flex flex-col justify-center mb-4">
+        <p className="text-sm">
           Created by{' '}
           <Link
             href="https://www.emelynbarrientos.com/"
@@ -15,9 +15,7 @@ export default function Footer() {
           </Link>
           .
         </p>
-        <p className="text-xs mb-1 sm:text-center">
-          Built with Next.js & Tailwind CSS
-        </p>
+        <p>Built with Next.js & Tailwind CSS</p>
       </div>
     </>
   )
