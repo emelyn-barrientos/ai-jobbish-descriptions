@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Dashboard from '@/components/Dashboard'
+import Footer from '@/components/Footer'
 import { Inter } from '@next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -30,6 +31,7 @@ export default function Home() {
           </p>
         </div>
         <Dashboard />
+        <Footer />
       </main>
     </>
   )
