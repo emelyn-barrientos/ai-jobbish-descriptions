@@ -44,7 +44,7 @@ export default function Form({
         <TextareaField
           label="Keywords for AI"
           name="keywords"
-          placeholder="Keywords for AI"
+          placeholder="Enter job description keywords for AI (press RETURN after each word)"
           value={keyWords}
           onChange={handleKeyWords}
           required
