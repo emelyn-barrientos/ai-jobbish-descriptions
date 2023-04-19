@@ -18,6 +18,7 @@ export default function Form({
   tone,
   wordCount,
   isGenerating,
+  handleFormReset,
 }) {
   const formRef = useRef(null)
 
@@ -89,7 +90,7 @@ export default function Form({
           isGenerating={isGenerating}
         />
         {/* Reset Form */}
-        <ResetFormButton formRef={formRef} />
+        <ResetFormButton formRef={formRef} handleFormReset={handleFormReset} />
       </form>
     </>
   )
