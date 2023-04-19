@@ -53,6 +53,7 @@ export default function Dashboard() {
   }
 
   const handleFormReset = () => {
+    setJobDescription('')
     setJobTitle('')
     setIndustry('')
     setKeyWords('')
