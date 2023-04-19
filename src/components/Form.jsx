@@ -2,6 +2,8 @@ import InputField from './InputField'
 import TextareaField from './TextareaField'
 import SelectField from './SelectField'
 import SubmitButton from './SubmitButton'
+import ResetFormButton from './ResetFormButton'
+import { useRef } from 'react'
 
 export default function Form({
   handleSubmit,
@@ -16,10 +18,13 @@ export default function Form({
   tone,
   wordCount,
   isGenerating,
+  handleFormReset,
 }) {
+  const formRef = useRef(null)
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         {/* Job Title */}
         <InputField
           label="Job Title"
@@ -84,6 +89,8 @@ export default function Form({
           wordCount={wordCount}
           isGenerating={isGenerating}
         />
+        {/* Reset Form */}
+        <ResetFormButton formRef={formRef} handleFormReset={handleFormReset} />
       </form>
     </>
   )

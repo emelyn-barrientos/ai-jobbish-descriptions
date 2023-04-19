@@ -29,9 +29,3 @@ export default function SubmitButton({
     </>
   )
 }
-
-{
-  /* <button
-        type="button"
-        className="bg-purple-500 w-full hover:bg-purple-700 cursor-pointer text-white font-bold mt-6 py-2 px-4 rounded" */
-}

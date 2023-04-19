@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function CopyButton({ jobDescription }) {
   const [isCopied, setIsCopied] = useState(false)
@@ -7,6 +7,10 @@ export default function CopyButton({ jobDescription }) {
     navigator.clipboard.writeText(jobDescription)
     setIsCopied(true)
   }
+
+  useEffect(() => {
+    setIsCopied(false)
+  }, [jobDescription])
 
   return (
     <>

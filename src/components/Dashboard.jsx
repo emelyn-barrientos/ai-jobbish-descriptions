@@ -52,6 +52,16 @@ export default function Dashboard() {
     }
   }
 
+  const handleFormReset = () => {
+    setJobDescription('')
+    setJobTitle('')
+    setIndustry('')
+    setKeyWords('')
+    setTone('')
+    setWordCount('')
+    setIsGenerating(false)
+  }
+
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-12">
@@ -68,6 +78,7 @@ export default function Dashboard() {
           tone={tone}
           wordCount={wordCount}
           isGenerating={isGenerating}
+          handleFormReset={handleFormReset}
         />
         <JobDescriptionOutput
           jobDescription={jobDescription}
