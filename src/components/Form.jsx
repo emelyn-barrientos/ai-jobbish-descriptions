@@ -2,6 +2,7 @@ import InputField from './InputField'
 import TextareaField from './TextareaField'
 import SelectField from './SelectField'
 import SubmitButton from './SubmitButton'
+import ResetFormButton from './ResetFormButton'
 
 export default function Form({
   handleSubmit,
@@ -84,6 +85,8 @@ export default function Form({
           wordCount={wordCount}
           isGenerating={isGenerating}
         />
+        {/* Reset Form */}
+        <ResetFormButton />
       </form>
     </>
   )
