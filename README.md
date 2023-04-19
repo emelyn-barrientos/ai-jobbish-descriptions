@@ -21,7 +21,7 @@ I'm currently troubleshooting a trim() method issue in production to actually ge
 
 ## NEXT STEPS ▶️ ##
 - [X] Fix trim method issue in production
-- [ ] Add reset button
+- [X] Add reset button
 
 
 ### Installation
