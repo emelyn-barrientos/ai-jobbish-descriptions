@@ -1,16 +1,8 @@
-export default function ResetFormButton({ formRef }) {
-  const handleReset = () => {
-    const form = formRef.current
-    for (let i = 0; i < form.elements.length; i++) {
-      const element = form.elements[i]
-      if (element.tagName.toLowerCase() === 'input') {
-        element.value = ''
-      } else if (element.tagName.toLowerCase() === 'textarea') {
-        element.value = ''
-      } else if (element.tagName.toLowerCase() === 'select') {
-        element.selectedIndex = 0
-      }
-    }
+export default function ResetFormButton({ formRef, handleFormReset }) {
+  const handleReset = (e) => {
+    e.preventDefault()
+    formRef.current.reset()
+    handleFormReset()
   }
 
   return (
