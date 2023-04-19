@@ -19,6 +19,7 @@ export default function Form({
   wordCount,
   isGenerating,
   handleFormReset,
+  isSubmitted,
 }) {
   const formRef = useRef(null)
 
