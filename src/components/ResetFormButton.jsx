@@ -1,8 +1,12 @@
-export default function ResetFormButton() {
+export default function ResetFormButton({ formRef }) {
+  console.log('formRef: ', formRef)
+  const handleReset = () => formRef.current.reset()
+
   return (
     <button
-      type="reset"
+      type="button"
       className="btn relative w-full rou mt-6 py-2 px-4 inline-block font-medium group"
+      onClick={handleReset}
     >
       <span className="absolute bg-black rounded inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
       <span className="absolute inset-0 w-full h-full bg-accent-aero border-2 rounded border-black group-hover:bg-accent-pink group-hover:ease-in-out duration-100"></span>
