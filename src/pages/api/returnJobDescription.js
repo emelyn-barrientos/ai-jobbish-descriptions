@@ -17,7 +17,7 @@ const generateDescription = async ({
       },
       body: JSON.stringify({
         prompt: `Write a job description for a ${jobTitle} role in ${industry} that is ${wordCount} words in a ${tone}. Incorporate the following keywords: ${keyWords}. The job position should be described in a way that is SEO friendly, highlighting its unique features and benefits.`,
-        max_tokens: 2000,
+        max_tokens: 1000,
         temperature: 0.5,
       }),
     })
