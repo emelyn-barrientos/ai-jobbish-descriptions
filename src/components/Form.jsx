@@ -72,10 +72,10 @@ export default function Form({
         <InputField
           label="Word Count"
           name="wordCount"
-          placeholder="Word Count (100-300 max)"
+          placeholder="Word Count (100-500 max)"
           type="number"
           min={100}
-          max={300}
+          max={500}
           value={wordCount}
           onChange={handleWordCount}
           required
