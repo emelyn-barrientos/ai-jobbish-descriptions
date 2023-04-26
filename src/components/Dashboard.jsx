@@ -1,6 +1,6 @@
 import Form from './Form'
 import JobDescriptionOutput from './JobDescriptionOutput'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Dashboard() {
   const [jobDescription, setJobDescription] = useState('')
@@ -61,10 +61,6 @@ export default function Dashboard() {
     setWordCount('')
     setIsGenerating(false)
   }
-
-  useEffect(() => {
-    console.log('jobDescription:', jobDescription)
-  }, [jobDescription])
 
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
