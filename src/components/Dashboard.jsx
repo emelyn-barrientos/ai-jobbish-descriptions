@@ -62,10 +62,6 @@ export default function Dashboard() {
     setIsGenerating(false)
   }
 
-  useEffect(() => {
-    console.log('jobDescription:', jobDescription)
-  }, [jobDescription])
-
   return (
     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-12">
